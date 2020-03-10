@@ -1,8 +1,8 @@
 import React from 'react';
+import propTypes from 'Prop-types';
 
 function Metric (props) {
-    console.log('Las props que vienen para el componente');
-    console.table(props);
+
     return (
         <div className="col-md-4 mb-4">
             <div className={`card ${props.border} shadow h-100 py-2`}>
@@ -20,6 +20,28 @@ function Metric (props) {
 							</div>
                             </div>
     )
-}
+};
+
+Metric.propTypes = {
+title: PropTypes.string.isRequired,
+icon: PropTypes.string.isRequired,
+value: PropTypes.oneOfType([
+	PropTypes.string,
+	PropTypes.number
+]).isRequired,
+border: PropTypes.oneOf([
+	"border-left-primary", "border-left-success", "border-left-warning"
+]).isRequired
+};
+
+Metric.defaultProps = {
+	title: 'Sin datos',
+	value: "--",
+	icon: '-',
+	border: "border-left-primary"
+};
+
+
+
 
 export default Metric;

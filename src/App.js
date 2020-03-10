@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Metric from './components/Metric';
 import Service from './components/Service';
 import Categories from './components/Categories';
+import ProductList from './components/ProductList';
 import Footer from './components/Footer';
 import data from './data/data';
 
@@ -63,9 +64,13 @@ function App() {
 						{/* Componente Categorias */}
             <Categories/>
 					</div>
+          <ProductList/>
 				</div>
+        
 				
 			</div>
+
+      
 			
 
 			
